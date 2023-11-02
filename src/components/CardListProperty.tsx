@@ -1,44 +1,66 @@
-import { Card, AspectRatio, CardContent, Typography, Avatar } from "@mui/joy";
-import StarIcon from '@mui/icons-material/Star';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import { useEffect, useState } from "react";
-
+import React from "react";
+import Card from "@mui/joy/Card";
+import CardOverflow from "@mui/joy/CardOverflow";
+import CardCover from "@mui/joy/CardCover";
+import CardContent from "@mui/joy/CardContent";
+import Typography from "@mui/joy/Typography";
+import AspectRatio from "@mui/joy/AspectRatio";
+import Box from "@mui/material/Box";
+import Avatar from "@mui/joy/Avatar";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export default function CardListProperty() {
-  const [star, setStar] = useState(false)
-
-  useEffect(() => {
-
-  }, [star])
   return (
-    <Card variant="plain" orientation="horizontal" className="w-[500px] shadow">
-      <AspectRatio minHeight={140} maxHeight={140} sx={{ width: '120px', marginLeft: '-30px', marginTop: '-30px' }}>
-        <img
-          src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-      </AspectRatio>
-      <CardContent orientation="vertical">
-        <CardContent orientation="horizontal">
-          <Avatar size="lg" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></Avatar>
-          <div className="ml-2 mr-auto">
-            <Typography level="title-md" startDecorator={
-              <Typography level="body-md">by</Typography>}
-            >Pornthawee Thaweesin
+    <Card
+      variant="plain"
+      orientation="horizontal"
+      sx={{
+        width: 500,
+        resize: "horizontal",
+        overflow: "auto",
+        borderRadius: "md",
+        boxShadow: "lg",
+      }}
+    >
+      <CardOverflow>
+        <AspectRatio flex ratio="1" sx={{ minWidth: 160 }}>
+          <img
+            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=870&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </AspectRatio>
+      </CardOverflow>
+      <CardContent>
+        <CardContent
+          orientation="horizontal"
+          sx={{ color: "white", justifyContent: "flex-center" }}
+        >
+          <Avatar
+            alt=""
+            src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&q=80&w=687&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+          <Box className="ml-2 mr-auto">
+            <Typography
+              level="title-md"
+              startDecorator={<Typography level="body-md">by</Typography>}
+            >
+              Pornthawee Thaweesin
             </Typography>
-            <Typography color="neutral" level="body-md" >January 21, 2019</Typography>
-          </div>
-          {star ?
-            <StarIcon onClick={() => setStar(false)} sx={{ fontSize: '20px', color: 'orange' }} />
-            : <StarBorderIcon onClick={() => setStar(true)} sx={{ fontSize: '20px' }} />
-          }
+            <Typography color="neutral" level="body-md">
+              January 21, 2019
+            </Typography>
+          </Box>
+          <FavoriteIcon style={{ color: "red" }} />
         </CardContent>
-        <CardContent>
-          <Typography level="h4" className="">Amazing Decorative House</Typography>
-          <Typography color="neutral" level="body-md">Lorem ipsum dolor. consectetur...</Typography>
+        <CardContent orientation="vertical" sx={{ justifyContent: "flex-end" }}>
+          <Typography level="h3" sx={{ color: "black" }}>
+            Amazing Decoraticve House
+          </Typography>
+          <Typography level="body-lg" sx={{ color: "Grey" }}>
+            Lorem ipsum dolor,consectetur...
+          </Typography>
         </CardContent>
       </CardContent>
-
     </Card>
-  )
+  );
 }
