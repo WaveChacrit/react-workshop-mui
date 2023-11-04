@@ -9,7 +9,11 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {useState} from "react";
 
-export default function CardListProperty() {
+type CardListPropertyProps = {
+  name : string
+  profile : string
+}
+export default function CardListProperty({name,profile}:CardListPropertyProps)  {
   const [heart, setHeart] = useState(false)
 
   return (
@@ -37,14 +41,15 @@ export default function CardListProperty() {
         >
           <Avatar
             alt=""
-            src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&q=80&w=687&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src={profile}
+            // src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&q=80&w=687&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
           <Box className="ml-2 mr-auto">
             <Typography
               level="title-md"
               startDecorator={<Typography level="body-md">by</Typography>}
             >
-              Chacrit Yaungkaew
+              {name}
             </Typography>
             <Typography color="neutral" level="body-md">
               January 21, 2019
