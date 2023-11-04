@@ -8,6 +8,7 @@ import CardBooking from "./CardBooking";
 import CardBlog from "./components/CardBlog";
 import CardTravelNorway from "./components/CardTravelNorway";
 import CardListProperty from "./components/CardListProperty";
+import CardPropertyLatest from "./components/CardPropertyLatest";
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4, margin: '60px' }}>
       {/* <CardPluto />
       <CardPlanTrip /> */}
-      <CardBooking />
+      {/* <CardBooking /> */}
       {/* <CardPluto2 /> */}
       {/* <CardPlanTrip />
       <CardPlanTrip2 /> */}
@@ -24,8 +25,9 @@ function App() {
       {/* <CardListProperty />
       <CardListProperty /> */}
       {/* <CardTravelNorway /> */}
-      <CardListProperty/>
       {/* <CardListProperty/> */}
+      {/* <CardListProperty/> */}
+      <CardPropertyLatest/>
     </Box>
   )
 }

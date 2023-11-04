@@ -1,7 +1,5 @@
-import React from "react";
+
 import Card from "@mui/joy/Card";
-import CardOverflow from "@mui/joy/CardOverflow";
-import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
 import AspectRatio from "@mui/joy/AspectRatio";
@@ -9,7 +7,7 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/joy/Avatar";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { useEffect, useState } from "react";
+import {useState} from "react";
 
 export default function CardListProperty() {
   const [heart, setHeart] = useState(false)
