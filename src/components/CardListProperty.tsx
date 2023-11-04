@@ -46,7 +46,7 @@ export default function CardListProperty() {
               level="title-md"
               startDecorator={<Typography level="body-md">by</Typography>}
             >
-              Pornthawee Thaweesin
+              Chacrit Yaungkaew
             </Typography>
             <Typography color="neutral" level="body-md">
               January 21, 2019
