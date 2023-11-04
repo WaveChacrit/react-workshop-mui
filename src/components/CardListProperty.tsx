@@ -8,28 +8,30 @@ import AspectRatio from "@mui/joy/AspectRatio";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/joy/Avatar";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { useEffect, useState } from "react";
 
 export default function CardListProperty() {
+  const [heart, setHeart] = useState(false)
+
   return (
     <Card
       variant="plain"
       orientation="horizontal"
       sx={{
         width: 500,
-        resize: "horizontal",
-        overflow: "auto",
         borderRadius: "md",
         boxShadow: "lg",
       }}
     >
-      <CardOverflow>
-        <AspectRatio flex ratio="1" sx={{ minWidth: 160 }}>
+      
+        <AspectRatio flex ratio="1" sx={{ marginLeft: "-30px", marginTop: "-30px", minWidth: "150px"}}>
           <img
             src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=870&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
         </AspectRatio>
-      </CardOverflow>
+      
       <CardContent>
         <CardContent
           orientation="horizontal"
@@ -50,7 +52,10 @@ export default function CardListProperty() {
               January 21, 2019
             </Typography>
           </Box>
-          <FavoriteIcon style={{ color: "red" }} />
+          {heart ?
+            <FavoriteIcon onClick={() => setHeart(false)}style={{ color: "red" }} />
+            : <FavoriteBorderIcon onClick={() => setHeart(true) } style={{ color: "grey"}}/>
+          }
         </CardContent>
         <CardContent orientation="vertical" sx={{ justifyContent: "flex-end" }}>
           <Typography level="h3" sx={{ color: "black" }}>
