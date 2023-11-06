@@ -10,6 +10,7 @@ import CardTravelNorway from "./components/CardTravelNorway";
 import CardListProperty from "./components/CardListProperty";
 import CardPropertyLatest from "./components/CardPropertyLatest";
 import CardListActivity from "./components/CardListActivity";
+import CardTeamReview from "./components/CardTeamReview";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <CardListProperty name={"Pornthawee"} profile={"https://images.unsplash.com/photo-1497316730643-415fac54a2af?auto=format&fit=crop&q=80&w=1064&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}/>
       {/* <CardPropertyLatest/> */}
       <CardListActivity/>
+      <CardTeamReview/>
     </Box>
   )
 }
