@@ -6,13 +6,18 @@ import Typography from "@mui/joy/Typography";
 import Avatar from "@mui/joy/Avatar";
 import AvatarGroup from "@mui/joy/AvatarGroup";
 import Button from "@mui/joy/Button";
-import CardActions from '@mui/joy/CardActions';
+import CardActions from "@mui/joy/CardActions";
 
 export default function CardTeamReview() {
   return (
     <Card
       variant="plain"
-      sx={{ borderRadius: "2rem", boxShadow: "sm", width: "350x",height: "fit-content" }}
+      sx={{
+        borderRadius: "2rem",
+        boxShadow: "sm",
+        width: "350x",
+        height: "fit-content",
+      }}
     >
       {/* <CardCover>
         <img
@@ -49,7 +54,16 @@ export default function CardTeamReview() {
         </Typography> */}
         </CardContent>
         <CardActions>
-          <Button onClick={function () {}} variant="solid" size="lg">
+          <Button
+            onClick={function () {}}
+            variant="solid"
+            size="lg"
+            sx={{
+              ":hover": { backgroundColor: "Aquamarine" },
+              color: "Tomato",
+              backgroundColor: "PowderBlue",
+            }}
+          >
             Join
           </Button>
         </CardActions>
