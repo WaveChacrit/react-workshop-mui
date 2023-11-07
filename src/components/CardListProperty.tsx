@@ -22,6 +22,7 @@ export default function CardListProperty({name,profile}:CardListPropertyProps)  
       orientation="horizontal"
       sx={{
         width: 500,
+        height: "fit-content",
         borderRadius: "md",
         boxShadow: "lg",
       }}
