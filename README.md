@@ -1,3 +1,5 @@
+## Component Practices
+  ![Component Practices](https://github.com/WaveChacrit/react-workshop-mui/blob/main/src/assets/images/demo-practice.png)
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
